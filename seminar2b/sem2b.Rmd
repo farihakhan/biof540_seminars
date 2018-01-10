@@ -39,3 +39,25 @@ ggplot(data = mpg) +
       geom_point(mapping = aes(x = displ, y = hwy, size = class))
 ```
 
+## Part 2: The layered grammar
+
+```{r}
+apropos("^geom_")
+apropos("^stat_")
+apropos("^scale_")
+```
+
+```{r smooth line}
+ggplot(data = mpg, 
+       mapping = aes(x = displ, y = hwy)) +
+  geom_point() +
+  geom_smooth()
+```
+
+## Part 3: Deliverable
+```{r deliverable}
+ggplot(data = mpg, 
+       mapping = aes(x = displ, y = hwy)) +
+  geom_point(aes(size = class, color = drv)) 
+```
+
