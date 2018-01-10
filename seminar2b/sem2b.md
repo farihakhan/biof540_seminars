@@ -46,3 +46,19 @@ Creating a ggplot
 You can also embed plots, for example:
 
 ![](sem2b_files/figure-markdown_github/pressure-1.png)
+
+``` r
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+```
+
+![](sem2b_files/figure-markdown_github/unnamed-chunk-2-1.png)
+
+``` r
+ggplot(data = mpg) + 
+      geom_point(mapping = aes(x = displ, y = hwy, size = class))
+```
+
+    ## Warning: Using size for a discrete variable is not advised.
+
+![](sem2b_files/figure-markdown_github/unnamed-chunk-3-1.png)
